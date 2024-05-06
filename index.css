@@ -34,3 +34,17 @@ body {
 #menu {
     height: 8vmax;    /* alçària d'un 8% respecte l'alçària de la pantalla */
 }
+#menu {
+    display: flex;    /* el menú és un contenidor de tipus flex */
+    height: 8vmax;
+}
+#menu i{
+    flex: 1;    /* cada botó pretén ocupar tot l'espai disponible */
+    display: flex;    /* contenidor flex on centrar-hi la icona */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #950E17;
+    font-size: 5vmax;
+    cursor: pointer;    /* en ordinadors, indica que s'hi pot fer clic */
+}
