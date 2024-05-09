@@ -63,7 +63,7 @@ body {
 }
 #menu {
     height: 8vmax;   
-    display: none;   
+    display: flex;   
     height: 8vmax;
 }
 #menu i{
