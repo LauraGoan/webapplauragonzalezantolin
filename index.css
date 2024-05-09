@@ -62,10 +62,8 @@ body {
     margin: 1vmin;
 }
 #menu {
-    height: 8vmax;    /* alçària d'un 8% respecte l'alçària de la pantalla */
-}
-#menu {
-    display: flex;    /* el menú és un contenidor de tipus flex */
+    height: 8vmax;   
+    display: none;   
     height: 8vmax;
 }
 #menu i{
