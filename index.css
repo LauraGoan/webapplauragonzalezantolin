@@ -159,3 +159,20 @@ body {
         transform: rotate(-90deg);    /* gir de 90 graus correponent al canvi d'orientació */
     }
 }
+#webcam-container {
+    margin: 2vh;
+}
+#reconeixement {
+    text-align:center;
+}
+#coincidencia {
+    display: none;    /* es farà visible quan es comencin a tenir dades */
+    font-size: 4vh;
+    margin-bottom: 1vh;
+}
+#prediccions {
+    font-size: 3vh;
+}
+#seccio_5 {
+    flex-direction: row;
+}
