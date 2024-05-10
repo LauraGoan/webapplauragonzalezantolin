@@ -176,3 +176,17 @@ body {
 #seccio_5 {
     flex-direction: row;
 }
+#seccio_6 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#div_diagrama {
+    width: 80vmin;
+    font-size: 5vh;   
+    text-align: center;
+}
+#div_valor {
+    font-size: 15vh; 
+    margin-top: 5vh;  
+}
