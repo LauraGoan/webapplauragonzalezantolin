@@ -105,7 +105,7 @@ window.onload = () => {
 }
 let validat = false;    // variable que permet saber si hi ha algun usuari validat
 let nom, contrasenya;
-let scriptURL = https://script.google.com/macros/s/AKfycbws3Czb6cc7kr6LCf08RsWCn36PzQrzyfUeIfwd_KspVo48pkOE0FBh0uLz63_f3B_zGA/exec    // s'ha de substituir la cadena de text per la URL del script
+let scriptURL = "https://script.google.com/macros/s/AKfycbws3Czb6cc7kr6LCf08RsWCn36PzQrzyfUeIfwd_KspVo48pkOE0FBh0uLz63_f3B_zGA/exec"    // s'ha de substituir la cadena de text per la URL del script
 
 function inici_sessio() {
     usuari = document.getElementById("nom_usuari").value;    // la propietat "value" d'un quadre de text correspon al text escrit per l'usuari
