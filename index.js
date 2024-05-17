@@ -70,13 +70,9 @@ function nou_usuari() {
         });
 }
 function tanca_sessio() {
-    if (validat) {
-        if (confirm("Vols tancar la sessió?")) {    // S'ha respost "Sí"
-            storage.setItem("usuari", "");
-            location.reload();    // recàrrega de la pàgina, es reinicialitzen totes les variables
-        }
-    }
+  location.reload();    // recàrrega de la pàgina, es reinicialitzen totes les variables
 }
+    
 window.onload = () => { 
     let base_de_dades = storage.getItem("base_de_dades");   
     if(base_de_dades == null) {
