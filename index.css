@@ -190,3 +190,6 @@ body {
     font-size: 15vh; 
     margin-top: 5vh;  
 }
+.ocult {
+    display: none !important;    /* amb prioritat sobre les declaracions condicionals segons l'orientació */
+}
