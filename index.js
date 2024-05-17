@@ -18,7 +18,7 @@ function canvia_seccio(num_boto) {
 }
 let validat = false;    // variable que permet saber si hi ha algun usuari validat
 let nom, contrasenya;
-let scriptURL = "https://script.google.com/.../exec"    // s'ha de substituir la cadena de text per la URL del script
+let scriptURL = "https://script.google.com/macros/s/AKfycbws3Czb6cc7kr6LCf08RsWCn36PzQrzyfUeIfwd_KspVo48pkOE0FBh0uLz63_f3B_zGA/exec"    // s'ha de substituir la cadena de text per la URL del script
 
 function inici_sessio() {
     nom = document.getElementById("nom_usuari").value;    // la propietat "value" d'un quadre de text correspon al text escrit per l'usuari
@@ -77,32 +77,3 @@ function tanca_sessio() {
         }
     }
 }
-window.onload = () => { 
-    let base_de_dades = storage.getItem("base_de_dades");   
-    if(base_de_dades == null) {
-        indexedDB.open("Dades").onupgradeneeded = event => {   
-            event.target.result.createObjectStore("Fotos", {keyPath: "ID", autoIncrement:true}).createIndex("Usuari_index", "Usuari");
-        }    // les fotos es desen a la taula "Fotos"
-        storage.setItem("base_de_dades","ok");
-    }
-    document.getElementById("obturador").addEventListener("change", function() {    // procediment que s'executa quan s'obté el fitxer de la foto realitzada (esdeveniment "change")
-        if(this.files[0] != undefined) {    // instruccions que s'executen només si s'obté algun fitxer (només es processa el primer que es rebi)
-            let canvas = document.getElementById("canvas");    // contenidor on es desa temporalment la imatge
-            let context = canvas.getContext("2d");
-            let imatge = new Image;
-            imatge.src = URL.createObjectURL(this.files[0]);    // es crea la imatge a partir del fitxer
-            imatge.onload = () => {    // procediment que s'executa un cop la imatge s'ha carregat en el contenidor
-                canvas.width = imatge.width;
-                canvas.height = imatge.height;                
-                context.drawImage(imatge,0,0,imatge.width,imatge.height);    // es "dibuixa" la imatge en el canvas
-                document.getElementById("foto").src = canvas.toDataURL("image/jpeg");    // la imatge es mostra en format jpg
-                document.getElementById("icona_camera").style.display = "none";    // s'oculta la icona que hi havia abans de fer la foto
-                document.getElementById("desa").style.display = "unset";    // es mostra el botó per desar la foto
-            }
-        }
-    });
-}
-let validat = false;    // variable que permet saber si hi ha algun usuari validat
-let nom, contrasenya;
-let scriptURL = "https://script.google.com/macros/s/AKfycbws3Czb6cc7kr6LCf08RsWCn36PzQrzyfUeIfwd_KspVo48pkOE0FBh0uLz63_f3B_zGA/exec"    // s'ha de substituir la cadena de text per la URL del script
-
