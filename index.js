@@ -157,7 +157,11 @@ function retorn_a_seccio() {
         document.getElementById("seccio_3").style.display = "flex";
     }
 }
-
+indexedDB.open("Dades").onsuccess = event => {
+    event.target.result.transaction(["Vehicles"], "readonly").objectStore("Vehicles").get("2").onsuccess = event => {    // obtenir les dades del registre que té com a clau principal el valor "2"
+    // espai per a les instruccions que s'executen un cop obtingudes les dades del registre
+    }
+}
 let velocitat = event.target.result["Velocitat"];    // resultat: velocitat = "120" (Turisme)
 indexedDB.open("Dades").onsuccess = event => {
     event.target.result.transaction(["Vehicles"], "readonly").objectStore("Vehicles").index("Motor").getAll("Diesel").onsuccess = event => {    // es retornen els registres dels vehicles amb motor Diesel
