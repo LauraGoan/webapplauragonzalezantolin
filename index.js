@@ -82,7 +82,19 @@ window.onload = () => {
         }    // les fotos es desen a la taula "Fotos"
         storage.setItem("base_de_dades","ok");
     }
-    document.getElementById("obturador").addEventListener("change", function() {    // procediment que s'executa quan s'obté el fitxer de la foto realitzada (esdeveniment "change")
+    let nou_registre = {    // valors dels camps del nou registre
+    Tipus: "Autobús",
+    Motor: "Diesel",
+    Any: "2019",
+    Velocitat: "110"
+};
+indexedDB.open("Dades").onsuccess = event => {    // obertura de la base de dades "Dades" creada anteriorment 
+    event.target.result.transaction("Vehicles", "readwrite").objectStore("Vehicles").add(nou_registre).onsuccess = () => {    // creació del nou registre en la taula "Vehicles"
+    // espai per a les instruccions que s'executen un cop afegit el registre
+    };
+};
+
+   document.getElementById("obturador").addEventListener("change", function() {    // procediment que s'executa quan s'obté el fitxer de la foto realitzada (esdeveniment "change")
         if(this.files[0] != undefined) {    // instruccions que s'executen només si s'obté algun fitxer (només es processa el primer que es rebi)
             let canvas = document.getElementById("canvas");    // contenidor on es desa temporalment la imatge
             let context = canvas.getContext("2d");
@@ -164,3 +176,24 @@ indexedDB.open("Dades").onsuccess = event => {
 }
 
 let any = event.target.result[0]["Any"];    // resultat: any = "2020" (Autocar)
+
+function omple_llista() {
+    let llista = '';
+    indexedDB.open("Dades").onsuccess = event => {
+        event.target.result.transaction(["Fotos"], "readonly").objectStore("Fotos").index("Usuari_index").getAll(usuari).onsuccess = event => {
+            dades = event.target.result;
+            for (i in dades) {    // per cada foto
+                llista+= '<div class="llista_fila"><div><img src="';    // es crea un contenidor de fila
+                llista+= dades[i]["Foto"];    // miniatura de la foto
+                llista+= '" onclick="mostra_foto(';    // atribut d'esdeveniment (mostrar la foto)
+                llista+= dades[i]["ID"];    // valor numèric que identifica el registre de la foto
+                llista+= ')" /></div><span>'; 
+                llista+= dades[i]["Data"];    // data i hora de la foto
+                llista+= '</span><i class="fa-solid fa-trash" onclick="esborra_foto(';    // atribut d'esdeveniment (esborrar la foto)
+                llista+= dades[i]["ID"];
+                llista+= ')"></i></div>';         
+            }
+            document.getElementById("llista_fotos").innerHTML = llista;    // s'ocupa el contenidor "llista_fotos" amb el fragment HTML creat
+        }
+    }
+}
