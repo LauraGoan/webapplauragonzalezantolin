@@ -157,3 +157,8 @@ function retorn_a_seccio() {
         document.getElementById("seccio_3").style.display = "flex";
     }
 }
+
+
+let storage = window.localStorage;
+storage.setItem("Tipus","Turisme");    // es desa la clau "Tipus" amb el valor "Turisme"
+let tipus = storage.getItem("Tipus");    // resultat: tipus = "Turisme"
