@@ -224,20 +224,3 @@ body {
 .ocult {
     display: none !important;    /* amb prioritat sobre les declaracions condicionals segons l'orientació */
 }
-#webcam-container {
-    margin: 2vh;
-}
-#reconeixement {
-    text-align:center;
-}
-#coincidencia {
-    display: none;    /* es farà visible quan es comencin a tenir dades */
-    font-size: 4vh;
-    margin-bottom: 1vh;
-}
-#prediccions {
-    font-size: 3vh;
-}
-    #seccio_5 {
-        flex-direction: row;
-    }
