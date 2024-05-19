@@ -158,7 +158,4 @@ function retorn_a_seccio() {
     }
 }
 
-
-let storage = window.localStorage;
-storage.setItem("Tipus","Turisme");    // es desa la clau "Tipus" amb el valor "Turisme"
-let tipus = storage.getItem("Tipus");    // resultat: tipus = "Turisme"
+let any = event.target.result[0]["Any"];    // resultat: any = "2020" (Autocar)
