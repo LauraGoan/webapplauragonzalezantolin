@@ -157,6 +157,8 @@ function retorn_a_seccio() {
         document.getElementById("seccio_3").style.display = "flex";
     }
 }
+
+let velocitat = event.target.result["Velocitat"];    // resultat: velocitat = "120" (Turisme)
 indexedDB.open("Dades").onsuccess = event => {
     event.target.result.transaction(["Vehicles"], "readonly").objectStore("Vehicles").index("Motor").getAll("Diesel").onsuccess = event => {    // es retornen els registres dels vehicles amb motor Diesel
     // espai per a les instruccions que s'executen un cop obtingudes les dades dels registres
