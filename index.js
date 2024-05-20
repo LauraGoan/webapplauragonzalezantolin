@@ -15,6 +15,9 @@ function canvia_seccio(num_boto) {
             seccio.style.display = "none";    // s'oculten les seccions inactives
         }
     }
+    if (num_boto == 3) {    // si es prem el botó de la secció "Galeria"
+    omple_llista();
+}
 }
 let validat = false;    // variable que permet saber si hi ha algun usuari validat
 let nom, contrasenya;
@@ -178,6 +181,26 @@ indexedDB.open("Dades").onsuccess = event => {
 
 let any = event.target.result[0]["Any"];    // resultat: any = "2020" (Autocar)
 
+function omple_llista() {
+    let llista = '';
+    indexedDB.open("Dades").onsuccess = event => {
+        event.target.result.transaction(["Fotos"], "readonly").objectStore("Fotos").index("Usuari_index").getAll(usuari).onsuccess = event => {
+            dades = event.target.result;
+            for (i in dades) {    // per cada foto
+                llista+= '<div class="llista_fila"><div><img src="';    // es crea un contenidor de fila
+                llista+= dades[i]["Foto"];    // miniatura de la foto
+                llista+= '" onclick="mostra_foto(';    // atribut d'esdeveniment (mostrar la foto)
+                llista+= dades[i]["ID"];    // valor numèric que identifica el registre de la foto
+                llista+= ')" /></div><span>'; 
+                llista+= dades[i]["Data"];    // data i hora de la foto
+                llista+= '</span><i class="fa-solid fa-trash" onclick="esborra_foto(';    // atribut d'esdeveniment (esborrar la foto)
+                llista+= dades[i]["ID"];
+                llista+= ')"></i></div>';         
+            }
+            document.getElementById("llista_fotos").innerHTML = llista;    // s'ocupa el contenidor "llista_fotos" amb el fragment HTML creat
+        }
+    }
+}
 function omple_llista() {
     let llista = '';
     indexedDB.open("Dades").onsuccess = event => {
