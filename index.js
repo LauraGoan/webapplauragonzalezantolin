@@ -19,6 +19,9 @@ function canvia_seccio(num_boto) {
     omple_llista();
     if (num_boto == 4) {
     mapa.invalidateSize();
+    if (typeof geoID === "undefined") {    // si encara no s'han obtingut les dades de localització del dispositiu
+        navigator.geolocation.watchPosition(geoExit);    // inicia el seguiment de la localització del dispositiu
+    }
 }
 }
 }
@@ -220,12 +223,7 @@ function esborra_foto(id) {
         };
     }
 }
-if (num_boto == 4) {
-    mapa.invalidateSize();
-    if (typeof geoID === "undefined") {    // si encara no s'han obtingut les dades de localització del dispositiu
-        navigator.geolocation.watchPosition(geoExit);    // inicia el seguiment de la localització del dispositiu
-    }
-}
+
 function geoExit(posicio){
     let latitud = posicio.coords.latitude;
     let longitud = posicio.coords.longitude;
