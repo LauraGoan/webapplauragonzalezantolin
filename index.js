@@ -93,10 +93,12 @@ window.onload = () => {
     Motor: "Diesel",
     Any: "2019",
     Velocitat: "110"
+    }
     mapa = L.map("seccio_4").setView([41.72, 1.82], 8);    // assigna el mapa a la secció, centrat en el punt i amb el nivell de zoom
      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {    // capa d'OpenStreetMap
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'    // autoria de la capa
     }).addTo(mapa);    // s'afegeix la capa al mapa
+
 };
 indexedDB.open("Dades").onsuccess = event => {    // obertura de la base de dades "Dades" creada anteriorment 
     event.target.result.transaction("Vehicles", "readwrite").objectStore("Vehicles").add(nou_registre).onsuccess = () => {    // creació del nou registre en la taula "Vehicles"
