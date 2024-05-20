@@ -173,6 +173,7 @@ let velocitat = event.target.result["Velocitat"];    // resultat: velocitat = "1
 indexedDB.open("Dades").onsuccess = event => {
     event.target.result.transaction(["Vehicles"], "readonly").objectStore("Vehicles").index("Motor").getAll("Diesel").onsuccess = event => {    // es retornen els registres dels vehicles amb motor Diesel
     // espai per a les instruccions que s'executen un cop obtingudes les dades dels registres
+    }
 }
 
 let any = event.target.result[0]["Any"];    // resultat: any = "2020" (Autocar)
