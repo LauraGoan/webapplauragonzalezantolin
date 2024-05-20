@@ -122,7 +122,7 @@ indexedDB.open("Dades").onsuccess = event => {    // obertura de la base de dade
             }
         }
     });
-}
+
 function desa_foto() {
     let nou_registre = {    // contingut del nou registre de la base de dades
         Usuari: usuari,    // nom d'usuari
