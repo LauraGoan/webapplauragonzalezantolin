@@ -17,6 +17,9 @@ function canvia_seccio(num_boto) {
     }
     if (num_boto == 3) {    // si es prem el botó de la secció "Galeria"
     omple_llista();
+    if (num_boto == 4) {
+    mapa.invalidateSize();
+}
 }
 }
 let validat = false;    // variable que permet saber si hi ha algun usuari validat
