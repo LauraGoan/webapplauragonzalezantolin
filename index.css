@@ -13,6 +13,8 @@ body {
     font-family: sans-serif;    /* un tipus de lletra adient per a llocs web */
     background-color: #CCFFEC;    /* color de fons en format #RRGGBB */
 }
+
+
 #superior {
     display: flex;
     height: 8vmax;    /* alçària d'un 8% respecte l'alçària de la pantalla */
@@ -22,9 +24,16 @@ body {
     color: white;    /* color del text */
     background-color: #BADFD1;    /* color de fons */
 }
+
+
 .seccio {
     flex: 1;    /* les seccions ocupen tot l'espai disponible */
     display: none;    /* les seccions s'inicien ocultes, excepte la primera */
+}
+#menu {
+    height: 8vmax;   
+    display: flex;   
+    height: 8vmax;
 }
 #seccio_1 {
     display: none;
@@ -62,11 +71,8 @@ body {
     padding: 2vmin;
     margin: 1vmin;
 }
-#menu {
-    height: 8vmax;   
-    display: flex;   
-    height: 8vmax;
-}
+
+
 #menu i{
     flex: 1;    /* cada botó pretén ocupar tot l'espai disponible */
     display: flex;    /* contenidor flex on centrar-hi la icona */
