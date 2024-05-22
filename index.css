@@ -13,8 +13,6 @@ body {
     font-family: sans-serif;    /* un tipus de lletra adient per a llocs web */
     background-color: #CCFFEC;    /* color de fons en format #RRGGBB */
 }
-
-
 #superior {
     display: flex;
     height: 8vmax;    /* alçària d'un 8% respecte l'alçària de la pantalla */
@@ -24,16 +22,9 @@ body {
     color: white;    /* color del text */
     background-color: #BADFD1;    /* color de fons */
 }
-
-
 .seccio {
     flex: 1;    /* les seccions ocupen tot l'espai disponible */
     display: none;    /* les seccions s'inicien ocultes, excepte la primera */
-}
-#menu {
-    height: 8vmax;   
-    display: flex;   
-    height: 8vmax;
 }
 #seccio_1 {
     display: none;
@@ -71,8 +62,11 @@ body {
     padding: 2vmin;
     margin: 1vmin;
 }
-
-
+#menu {
+    height: 8vmax;   
+    display: flex;   
+    height: 8vmax;
+}
 #menu i{
     flex: 1;    /* cada botó pretén ocupar tot l'espai disponible */
     display: flex;    /* contenidor flex on centrar-hi la icona */
@@ -146,26 +140,6 @@ body {
     max-height: 95vmax;
     cursor: pointer;
 }
-@media (orientation: landscape) {
-    #seccio_2 {
-        flex-direction: row;
-    }
-    #div_foto {
-        flex-direction: column;
-    }
-    #div_control {
-        width: 25vmax;
-        height: auto;
-        flex-direction: column;
-    }
-    #div_gran {
-        max-height: 100vh;
-        max-height: 100svh;
-    }
-    #foto_gran {
-        transform: rotate(-90deg);    /* gir de 90 graus correponent al canvi d'orientació */
-    }
-}
 #llista_titol {
     display: flex;
     justify-content: center;
@@ -197,7 +171,26 @@ body {
         height: 70vmin;
     }
 }
-
+@media (orientation: landscape) {
+    #seccio_2 {
+        flex-direction: row;
+    }
+    #div_foto {
+        flex-direction: column;
+    }
+    #div_control {
+        width: 25vmax;
+        height: auto;
+        flex-direction: column;
+    }
+    #div_gran {
+        max-height: 100vh;
+        max-height: 100svh;
+    }
+    #foto_gran {
+        transform: rotate(-90deg);    /* gir de 90 graus correponent al canvi d'orientació */
+    }
+}
 #webcam-container {
     margin: 2vh;
 }
