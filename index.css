@@ -146,6 +146,26 @@ body {
     max-height: 95vmax;
     cursor: pointer;
 }
+@media (orientation: landscape) {
+    #seccio_2 {
+        flex-direction: row;
+    }
+    #div_foto {
+        flex-direction: column;
+    }
+    #div_control {
+        width: 25vmax;
+        height: auto;
+        flex-direction: column;
+    }
+    #div_gran {
+        max-height: 100vh;
+        max-height: 100svh;
+    }
+    #foto_gran {
+        transform: rotate(-90deg);    /* gir de 90 graus correponent al canvi d'orientació */
+    }
+}
 #llista_titol {
     display: flex;
     justify-content: center;
@@ -177,26 +197,7 @@ body {
         height: 70vmin;
     }
 }
-@media (orientation: landscape) {
-    #seccio_2 {
-        flex-direction: row;
-    }
-    #div_foto {
-        flex-direction: column;
-    }
-    #div_control {
-        width: 25vmax;
-        height: auto;
-        flex-direction: column;
-    }
-    #div_gran {
-        max-height: 100vh;
-        max-height: 100svh;
-    }
-    #foto_gran {
-        transform: rotate(-90deg);    /* gir de 90 graus correponent al canvi d'orientació */
-    }
-}
+
 #webcam-container {
     margin: 2vh;
 }
