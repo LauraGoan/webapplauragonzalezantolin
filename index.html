@@ -1,22 +1,14 @@
 <!DOCTYPE html>  
 <html lang="ca">
-    
     <head>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="index.css">
         <meta charset="UTF-8">    <!-- codificació del text (UTF-8) -->
         <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- adapta la visualització a les mides de la pantalla -->
         <meta name="description" content="Descripció de la nostra webapp.">    <!-- breu descripció per als cercadors -->
-        <script src="index.js"></script>
-        <link rel="stylesheet" href="index.css">
-
-        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script> 
-      
-        
         <title> 
             LAURA GONZALEZ
         </title>
-       
-
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>  
         
@@ -26,10 +18,6 @@
     
     
     <body>
-      <div id="superior">    <!-- franja superior per mostar el nom de la webapp -->
-            WEB GOAN
-      </div>
-        
       <div id="seccio_0" class="seccio">          
           <div>
             Inici de sessió    <!-- títol de la secció -->
@@ -50,7 +38,9 @@
           </div>
          </div> 
 
-
+      <div id="superior">    <!-- franja superior per mostar el nom de la webapp -->
+            WEB GOAN
+      </div>
       <div id="seccio_1" >   <!-- espai central per mostrar contingut -->
            seccio 1
       </div>
@@ -71,13 +61,10 @@
             <i class="fa-solid fa-circle-dot"></i>    <!-- icona del botó per fer la foto -->
           </label>
           <input type="file" accept="image/*" id="obturador" capture="camera" /> <!-- element que captura la imatge -->
+          <i id="desa" class="fa-solid fa-check"></i>    <!-- icona del botó per desar la foto -->
           <i id="desa" class="fa-solid fa-check" onclick="desa_foto()"></i>
           <img id="foto" onclick="mostra_foto(0)">
           <img id="foto_gran" onclick="retorn_a_seccio()" />
-          </div>
-          <canvas id="canvas"></canvas>
-          <div id="div_gran">
-          <img id="foto_gran" />
         </div>
     </div>
 
@@ -130,5 +117,4 @@
     </div>
 
 </html>
-
 
