@@ -138,6 +138,7 @@ body {
     max-height: -webkit-fill-available;
 }
 #foto_gran {
+    display:flex 
     max-width: 95vmin;
     max-height: 95vmax;
     cursor: pointer;
@@ -200,7 +201,7 @@ body {
     overflow-y: scroll;
 }
 #llista_fotos::-webkit-scrollbar {
-    display: none;    /* oculta la barra de desplaçament vertical */
+    display: flex;    /* oculta la barra de desplaçament vertical */
 }
 @media (orientation: landscape) {
     #llista_fotos {
