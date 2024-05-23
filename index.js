@@ -15,15 +15,6 @@ function canvia_seccio(num_boto) {
             seccio.style.display = "none";    // s'oculten les seccions inactives
         }
     }
-        if (num_boto == 3) {    // si es prem el botó de la secció "Galeria"
-    omple_llista();
-    if (num_boto == 4) {
-    mapa.invalidateSize();
-    if (typeof geoID === "undefined") {    // si encara no s'han obtingut les dades de localització del dispositiu
-        navigator.geolocation.watchPosition(geoExit);    // inicia el seguiment de la localització del dispositiu
-    }
-}
-}
 }
 function inici_sessio() {
     nom = document.getElementById("nom_usuari").value;    // la propietat "value" d'un quadre de text correspon al text escrit per l'usuari
@@ -191,6 +182,9 @@ indexedDB.open("Dades").onsuccess = event => {
 
 let any = event.target.result[0]["Any"];    // resultat: any = "2020" (Autocar)
 
+if (num_boto == 3) {    // si es prem el botó de la secció "Galeria"
+    omple_llista();
+}
 function omple_llista() {
     let llista = '';
     indexedDB.open("Dades").onsuccess = event => {
