@@ -182,7 +182,7 @@ body {
 }
 #llista_titol i {
     font-size: 4vmax;
-    color:#950E17;
+    color:#8997D7;
 }
 #llista_titol i:nth-child(1) {    /* primer <i> (miniatura de la foto) */
     flex: 2;
