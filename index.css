@@ -169,12 +169,6 @@ body {
     #superior {
         display: none;    /* franja superior oculta per optimitzar l'espai */
     }
-    #menu {
-        flex-direction: row;
-        width: 8vmax;
-        height: auto;    /* sobreescriu la declaració height: 8vmax; */
-   }
-
 
 #llista_titol {
     display: flex;
