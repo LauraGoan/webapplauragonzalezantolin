@@ -33,6 +33,7 @@ body {
     font-size: 4vmax;
 }
 #menu {
+    flex-direction: row;
     display: flex; 
     height: 8vmax;   
   
