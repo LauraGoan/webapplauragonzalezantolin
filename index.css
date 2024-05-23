@@ -209,9 +209,6 @@ body {
     }
 }
 
-#seccio_5 {
-    flex-direction: row;
-}
 
 #webcam-container {
     margin: 2vh;
@@ -226,6 +223,11 @@ body {
 }
 #prediccions {
     font-size: 3vh;
+}
+@media (orientation: landscape) {
+    #seccio_5 {
+    flex-direction: row;
+}
 }
 #seccio_6 {
     flex-direction: column;
