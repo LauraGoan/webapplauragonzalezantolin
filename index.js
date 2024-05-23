@@ -46,8 +46,6 @@ function inici_sessio() {
                 inicia_sessio();    // usuari validat, s'executen les instruccions del procediment "inicia_sessio"
             }
         });    
-}
-function inicia_sessio() {
     validat = true;    // usuari validat
     document.getElementById("seccio_0").style.display = "none";    // s'oculta la secció de validació d'usuaris
     canvia_seccio(1);    // es mostra la secció 1
