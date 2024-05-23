@@ -162,6 +162,7 @@ body {
         transform: rotate(-90deg);    /* gir de 90 graus correponent al canvi d'orientació */
     }
 }
+@media (orientation: landscape) {
     body {
         flex-direction: row;    /* sobreescriu la declaració flex-direction: column; */
         flex-flow: row-reverse;    /* disposició de dreta a esquerra, per mostrar el menú a l'esquerra */
@@ -169,7 +170,12 @@ body {
     #superior {
         display: none;    /* franja superior oculta per optimitzar l'espai */
     }
-
+    #menu {
+        flex-direction: column;
+        width: 8vmax;
+        height: auto;    /* sobreescriu la declaració height: 8vmax; */
+    }
+}
 #llista_titol {
     display: flex;
     justify-content: center;
