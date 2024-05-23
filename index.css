@@ -2,7 +2,6 @@
 html { 
     height: -webkit-fill-available;
 }
-@media (orientation: landscape){
 body {
     display: flex;    /* tipus de display que ofereix més prestacions que block */
     flex-direction: column;    /* els elements es disposen de dalt cap abaix */
@@ -37,6 +36,19 @@ body {
     height: 8vmax;   
     display: flex;   
 }
+@media (orientation: landscape) {
+    body {
+        flex-direction: row;    /* sobreescriu la declaració flex-direction: column; */
+        flex-flow: row-reverse;    /* disposició de dreta a esquerra, per mostrar el menú a l'esquerra */
+    }
+    #superior {
+        display: none;    /* franja superior oculta per optimitzar l'espai */
+    }
+    #menu {
+        flex-direction: column;
+        width: 8vmax;
+        height: auto;    /* sobreescriu la declaració height: 8vmax; */
+    }
 }
 
 #menu i{
