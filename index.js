@@ -49,6 +49,10 @@ function inici_sessio() {
     validat = true;    // usuari validat
     document.getElementById("seccio_0").style.display = "none";    // s'oculta la secció de validació d'usuaris
     canvia_seccio(1);    // es mostra la secció 1
+    let validat = false;    // variable que permet saber si hi ha algun usuari validat
+    let nom, contrasenya;
+    let scriptURL = "https://script.google.com/macros/s/AKfycbzh6L9OdL4D8HAklBcnP_dkuH26W26uJdfruIccHIMEn1oFsuIFiw8_sr_0W6F5KwhEfg/exec"    // s'ha de substituir la cadena de text per la URL del script
+ 
 }
 function nou_usuari() {
     nom = document.getElementById("nom_usuari").value;
