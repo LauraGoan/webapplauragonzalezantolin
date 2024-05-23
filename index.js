@@ -1,6 +1,9 @@
 function canvia_seccio(num_boto) {
     if (num_boto == 4) {
     mapa.invalidateSize();
+    }
+     if (num_boto == 4) {
+    mapa.invalidateSize();
     if (typeof geoID === "undefined") {    // si encara no s'han obtingut les dades de localització del dispositiu
         navigator.geolocation.watchPosition(geoExit);    // inicia el seguiment de la localització del dispositiu
     }
