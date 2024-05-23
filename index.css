@@ -158,7 +158,7 @@ body {
         width: 8vmax;
         height: auto;    /* sobreescriu la declaració height: 8vmax; */
    }
-}
+
 
 #llista_titol {
     display: flex;
