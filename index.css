@@ -77,21 +77,6 @@ body {
     padding: 2vmin;
     margin: 1vmin;
 }
-
-@media (orientation: landscape) {
-    body {
-        flex-direction: row;    /* sobreescriu la declaració flex-direction: column; */
-        flex-flow: row-reverse;    /* disposició de dreta a esquerra, per mostrar el menú a l'esquerra */
-    }
-    #superior {
-        display: none;    /* franja superior oculta per optimitzar l'espai */
-    }
-    #menu {
-        flex-direction: column;
-        width: 8vmax;
-        height: auto;    /* sobreescriu la declaració height: 8vmax; */
-   }
-}
 #div_foto {
     flex: 1;
     display: flex;
@@ -100,7 +85,7 @@ body {
 }
 #icona_camera {
     font-size: 40vmin;
-    color: #950E17;
+    color: #8997D7;
 }
 #foto {
     max-width: 60vmin;    /* dimensions màximes per a la prveisualització de les fotos */
@@ -141,6 +126,40 @@ body {
     max-height: 95vmax;
     cursor: pointer;
 }
+@media (orientation: landscape) {
+    #seccio_2 {
+        flex-direction: row;
+    }
+    #div_foto {
+        flex-direction: column;
+    }
+    #div_control {
+        width: 25vmax;
+        height: auto;
+        flex-direction: column;
+    }
+    #div_gran {
+        max-height: 100vh;
+        max-height: 100svh;
+    }
+    #foto_gran {
+        transform: rotate(-90deg);    /* gir de 90 graus correponent al canvi d'orientació */
+    }
+}
+    body {
+        flex-direction: row;    /* sobreescriu la declaració flex-direction: column; */
+        flex-flow: row-reverse;    /* disposició de dreta a esquerra, per mostrar el menú a l'esquerra */
+    }
+    #superior {
+        display: none;    /* franja superior oculta per optimitzar l'espai */
+    }
+    #menu {
+        flex-direction: column;
+        width: 8vmax;
+        height: auto;    /* sobreescriu la declaració height: 8vmax; */
+   }
+}
+
 #llista_titol {
     display: flex;
     justify-content: center;
@@ -173,25 +192,7 @@ body {
     }
 }
 @media (orientation: landscape) {
-    #seccio_2 {
-        flex-direction: row;
-    }
-    #div_foto {
-        flex-direction: column;
-    }
-    #div_control {
-        width: 25vmax;
-        height: auto;
-        flex-direction: column;
-    }
-    #div_gran {
-        max-height: 100vh;
-        max-height: 100svh;
-    }
-    #foto_gran {
-        transform: rotate(-90deg);    /* gir de 90 graus correponent al canvi d'orientació */
-    }
-}
+
 #webcam-container {
     margin: 2vh;
 }
