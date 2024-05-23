@@ -125,10 +125,10 @@ body {
     opacity: 0;
 }
 #canvas, #desa {
-    display: none;
+    display: flex;
 }
 #div_gran {
-    display: none;
+    display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
