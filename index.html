@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>  
         
-       <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js">    // s'utilitza la IA de TensorFlow </script>
+       <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script> 
     </head>
     
@@ -89,8 +89,9 @@
 
     
     <div id="seccio_5" class="seccio">
+         <i id="icona_video" class="fa-solid fa-video" onclick="inicia_video()"></i>
       <div>
-        <i id="icona_video" class="fa-solid fa-video" onclick="inicia_video()"></i>
+       
         <div id="webcam-container"></div>    <!-- contenidor de vídeo -->
       </div>
       <div id="reconeixement">    <!-- espai per visualitzar les dades -->
