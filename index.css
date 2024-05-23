@@ -2,6 +2,7 @@
 html { 
     height: -webkit-fill-available;
 }
+@media (orientation: landscape) {
 body {
     display: flex;    /* tipus de display que ofereix més prestacions que block */
     flex-direction: column;    /* els elements es disposen de dalt cap abaix */
@@ -35,7 +36,7 @@ body {
 #menu {
     height: 8vmax;   
     display: flex;   
-    height: 8vmax;
+}
 }
 #menu i{
     flex: 1;    /* cada botó pretén ocupar tot l'espai disponible */
