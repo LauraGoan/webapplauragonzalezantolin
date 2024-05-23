@@ -48,6 +48,20 @@ body {
     font-size: 5vmax;
     cursor: pointer;    /* en ordinadors, indica que s'hi pot fer clic */
 }
+@media (orientation: landscape) {
+    body {
+        flex-direction: row;    /* sobreescriu la declaració flex-direction: column; */
+        flex-flow: row-reverse;    /* disposició de dreta a esquerra, per mostrar el menú a l'esquerra */
+    }
+    #superior {
+        display: none;    /* franja superior oculta per optimitzar l'espai */
+    }
+    #menu {
+        flex-direction: column;
+        width: 8vmax;
+        height: auto;    /* sobreescriu la declaració height: 8vmax; */
+    }
+}
 
 #seccio_0 {
     display: flex;
@@ -156,7 +170,7 @@ body {
         display: none;    /* franja superior oculta per optimitzar l'espai */
     }
     #menu {
-        flex-direction: column;
+        flex-direction: row;
         width: 8vmax;
         height: auto;    /* sobreescriu la declaració height: 8vmax; */
    }
