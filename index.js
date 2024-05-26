@@ -38,9 +38,7 @@ function inici_sessio() {
     contrasenya = document.getElementById("contrasenya").value;
     let consulta = scriptURL + "?query=select&where=usuari&is=" + nom + "&and=contrasenya&equal=" + contrasenya;
     fetch(consulta)
-        .then((resposta) => {   // registres que contenen el nom d'usuari i contrasenya escrits per l'usuari
-            return resposta.json();    // conversió a llista
-        })
+       .then(resposta => resposta.json()) // Conversión a lista
         .then((resposta) => {
             if(resposta.length == 0) {    // llista buida
                 window.alert("El nom d'usuari o la contrasenya no són correctes.");
